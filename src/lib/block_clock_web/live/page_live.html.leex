@@ -1,0 +1,14 @@
+<div>
+  <%= if @data.latest_block do %>
+    <h1>Current Block Time</h1>
+    <div class="block_time">
+      <%= number_to_spans(@data.latest_block.height) %>
+    </div>
+    <div>Transactions included in last block: <%= @data.latest_block.tx_count %></div>
+    <div class="text-gray">Last updated: <%= last_updated(@data.last_updated) %></div>
+  <% end %>
+
+  <div class="inspired-by text-gray">
+    <p>Inspired by <a href="https://blockclockmini.com/" target="_blank">BLOCKCLOCK™ mini</a></p>
+  </div>
+</div>
